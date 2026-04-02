@@ -1,0 +1,36 @@
+.restaurants-page { padding-top: 64px; }
+.search-bar {
+  display: flex; align-items: center; gap: 12px; max-width: 620px; margin: 24px auto 0;
+  background: rgba(255,255,255,0.15); border: 1.5px solid rgba(255,255,255,0.25);
+  border-radius: 50px; padding: 6px 6px 6px 20px; backdrop-filter: blur(8px);
+}
+.search-bar span { color: white; font-size: 1.1rem; }
+.search-bar input { flex: 1; background: none; border: none; outline: none; color: white; font-size: 1rem; font-family: var(--font-body); }
+.search-bar input::placeholder { color: rgba(255,255,255,0.6); }
+.search-bar .btn { border-radius: 40px; }
+.restaurants-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; padding: 40px 24px; align-items: start; }
+.filters-sidebar { background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 24px; position: sticky; top: 84px; }
+.filters-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.filters-header h3 { font-family: var(--font-display); font-size: 1.1rem; }
+.clear-link { background: none; border: none; color: var(--primary); font-size: 0.85rem; cursor: pointer; font-family: var(--font-body); text-decoration: underline; }
+.filter-group { margin-bottom: 24px; }
+.filter-group label { display: block; font-weight: 600; font-size: 0.875rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.filter-chip { display: block; width: 100%; text-align: left; padding: 8px 12px; margin-bottom: 6px; background: none; border: 1.5px solid var(--border); border-radius: 8px; cursor: pointer; font-family: var(--font-body); font-size: 0.875rem; color: var(--text); transition: all 0.2s; }
+.filter-chip:hover { border-color: var(--primary); color: var(--primary); }
+.filter-chip.active { background: var(--primary); border-color: var(--primary); color: white; }
+.price-chips { display: flex; gap: 8px; }
+.price-chip { flex: 1; padding: 8px 4px; background: none; border: 1.5px solid var(--border); border-radius: 8px; cursor: pointer; font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; color: var(--text); transition: all 0.2s; text-align: center; }
+.price-chip:hover { border-color: var(--primary); color: var(--primary); }
+.price-chip.active { background: var(--primary); border-color: var(--primary); color: white; }
+.results-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.results-count { color: var(--text-muted); font-size: 0.95rem; }
+.results-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.empty-state { text-align: center; padding: 80px 24px; }
+.empty-icon { font-size: 4rem; margin-bottom: 16px; }
+.empty-state h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 8px; }
+.empty-state p { color: var(--text-muted); margin-bottom: 24px; }
+.pagination { display: flex; gap: 8px; justify-content: center; margin-top: 40px; }
+.page-btn { width: 40px; height: 40px; border-radius: 8px; border: 1.5px solid var(--border); background: white; cursor: pointer; font-family: var(--font-body); font-weight: 500; transition: all 0.2s; }
+.page-btn:hover { border-color: var(--primary); color: var(--primary); }
+.page-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+@media (max-width: 900px) { .restaurants-layout { grid-template-columns: 1fr; } .filters-sidebar { position: static; } }

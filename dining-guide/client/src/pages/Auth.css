@@ -1,0 +1,25 @@
+.auth-page { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; padding-top: 64px; }
+.auth-image { position: relative; overflow: hidden; }
+.auth-image img { width: 100%; height: 100%; object-fit: cover; }
+.auth-image-overlay {
+  position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,5,0,0.85), rgba(10,5,0,0.3));
+  display: flex; flex-direction: column; justify-content: flex-end; padding: 48px 40px;
+}
+.auth-image-overlay h2 { font-family: var(--font-display); font-size: 1.8rem; color: white; margin-bottom: 12px; font-style: italic; line-height: 1.3; }
+.auth-image-overlay p { color: rgba(255,255,255,0.7); }
+.auth-form-side { display: flex; align-items: center; justify-content: center; background: var(--bg); padding: 40px 24px; }
+.auth-form-wrapper { width: 100%; max-width: 420px; }
+.auth-brand { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--primary); text-decoration: none; margin-bottom: 32px; }
+.auth-form-wrapper h1 { font-family: var(--font-display); font-size: 2rem; color: var(--secondary); margin-bottom: 8px; }
+.auth-subtitle { color: var(--text-muted); margin-bottom: 32px; }
+.auth-submit { width: 100%; justify-content: center; padding: 14px; font-size: 1rem; margin-top: 8px; }
+.auth-switch { text-align: center; margin-top: 24px; color: var(--text-muted); font-size: 0.9rem; }
+.auth-switch a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.auth-switch a:hover { text-decoration: underline; }
+.alert { padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-size: 0.9rem; }
+.alert-error { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
+.btn-spinner { width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.4); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
+.password-strength { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+.strength-bar { display: flex; gap: 4px; flex: 1; }
+.strength-segment { height: 4px; flex: 1; border-radius: 2px; transition: background 0.3s; }
+@media (max-width: 768px) { .auth-page { grid-template-columns: 1fr; } .auth-image { display: none; } }

@@ -1,0 +1,25 @@
+.restaurant-card { text-decoration: none; color: inherit; display: block; }
+.card-img-wrapper { position: relative; height: 200px; overflow: hidden; }
+.card-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.restaurant-card:hover .card-img-wrapper img { transform: scale(1.07); }
+.card-badges { position: absolute; top: 12px; left: 12px; display: flex; gap: 6px; }
+.fav-btn {
+  position: absolute; top: 10px; right: 10px;
+  background: rgba(255,255,255,0.9); border: none; width: 36px; height: 36px;
+  border-radius: 50%; cursor: pointer; font-size: 1.1rem; display: flex;
+  align-items: center; justify-content: center; transition: all 0.2s;
+  backdrop-filter: blur(4px);
+}
+.fav-btn:hover { transform: scale(1.15); }
+.card-body { padding: 16px; }
+.card-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; color: var(--secondary); }
+.card-cuisine { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; }
+.card-rating { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.rating-num { font-weight: 700; font-size: 0.9rem; color: var(--secondary); }
+.review-count { font-size: 0.8rem; color: var(--text-muted); }
+.card-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px; }
+.card-features { display: flex; flex-wrap: wrap; gap: 6px; }
+.feature-tag {
+  font-size: 0.75rem; padding: 3px 10px; background: var(--surface-warm);
+  border-radius: 20px; color: var(--text-muted); border: 1px solid var(--border);
+}
